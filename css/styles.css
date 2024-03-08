@@ -33,12 +33,12 @@ body {
     color: white;
 }
 
-.nav .nav-section {
+.nav>.nav-section {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
-.nav .nav-section div:nth-child(odd) {
+.nav>.nav-section>div:nth-child(odd) {
     justify-self: center;
 }
 
@@ -48,7 +48,47 @@ body {
 
 .header {
     background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+}
 
+.header>.first-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 64px;
+}
+
+.header>.first-row>.search {
+    background-color: brown;
+    display: flex;
+    padding: 24px 36px;
+    align-items: center;
+    gap: 8px;
+}
+
+.header>.first-row>.search>div {
+    width: 25px;
+    height: 25px;
+    background-color: bisque;
+}
+
+.header>.first-row>.account {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr max-content;
+    color: white;
+    padding: 24px 36px;
+    gap: 8px;
+}
+
+.header>.first-row>.account>div {
+    background-color: gray;
+}
+
+.header input {
+    height: 25px;
+    flex: 1;
 }
 
 .dashboard {
