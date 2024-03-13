@@ -6,6 +6,7 @@
     padding: 0;
     height: 100%;
     --main-color: #2563eb;
+    --background-color: #d8dfe9;
 }
 
 body {
@@ -79,7 +80,7 @@ img {
 }
 
 .header {
-    background-color: aqua;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: stretch;
@@ -88,81 +89,111 @@ img {
 .header>.first-row {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 64px;
+    gap: 96px;
+    padding: 24px 36px 8px 36px;
 }
 
 .header>.first-row>.search {
-    background-color: brown;
     display: flex;
-    padding: 24px 36px;
     align-items: center;
     gap: 8px;
 }
 
-.header>.first-row>.search>div {
+.header>.first-row>.search>img {
     width: 25px;
     height: 25px;
-    background-color: bisque;
+    filter: brightness(0) saturate(100%);
 }
 
 .header>.first-row>.account {
-    background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr max-content;
     color: white;
-    padding: 24px 36px;
-    gap: 8px;
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+}
+
+.header>.first-row>.account>img:first-child {
+    filter: brightness(0) saturate(100%);
+    width: 25px;
+    height: 25px;
+}
+
+.header>.first-row>.account>img:nth-child(2) {
+    filter: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
 .header>.first-row>.account>div {
-    background-color: gray;
+    color: black;
+    font-weight: 500;
+    padding: 8px;
 }
 
 .header input {
-    height: 25px;
+    appearance: none;
+    height: 30px;
     flex: 1;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--background-color);
+    padding: 8px 12px;
 }
 
 .header>.second-row {
     display: grid;
     grid-template-columns: 16fr 9fr;
-    gap: 8px;
+    gap: 16px;
     height: min-content;
+    padding: 16px 36px;
 }
 
 .header>.second-row>.account {
     display: grid;
     grid-template-columns: min-content 1fr;
-    padding: 8px 36px;
     align-items: center;
     column-gap: 16px;
     row-gap: 8px;
 }
 
-.header>.second-row>.account>div:first-child {
+.header>.second-row>.account>img:first-child {
     width: 60px;
     height: 60px;
-    background-color: green;
+    filter: none;
+    border-radius: 50%;
     grid-row: 1 / 3;
 }
 
-.header>.second-row>.account>div:nth-child(2) {
+.header>.second-row>.account>*:nth-child(2) {
     align-self: end;
+    font-size: 12px;
+    font-weight: 500;
 }
 
-.header>.second-row>.account>div:last-child {
+.header>.second-row>.account>*:last-child {
     align-self: start;
+    font-size: 18px;
+    font-weight: 600;
 }
  
 .header>.second-row>.buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    justify-items: end;
+    gap: 16px;
 }
 
 .header button {
-    width: 80px;
+    width: 85px;
     height: 35px;
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 18px;
+    color: white;
 }
 
 .dashboard {
