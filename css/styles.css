@@ -38,6 +38,7 @@ img {
     padding: 16px;
     color: white;
     font-size: 18px;
+    z-index: 3;
 }
 
 .nav>.nav-section {
@@ -84,6 +85,8 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: stretch;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 2;
 }
 
 .header>.first-row {
@@ -204,6 +207,7 @@ img {
     padding: 24px 36px;
     column-gap: 24px;
     overflow: auto;
+    z-index: 1;
 }
 
 .projects {
